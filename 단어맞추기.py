@@ -15,7 +15,22 @@ for _ in range(word_length):
     display += "_"
 
 while not end_of_game:
-    guess_word = input("글자를 맞춰봐:").lower()
+    if chosen_word == "바나나":
+        print("열대 과일중에 나무에서 자라는 과일이야!, 3글자")
+    if chosen_word == "파인애플":
+        print("사과랑 비슷한 이름이지만 맛이 완전 달라!, 4글자")
+    if chosen_word == "사과":
+        print("가장 흔하게 먹을 수 잇는 과일 인 것 같아!, 2글자")
+    if chosen_word == "복숭아":
+        print("애벌레들이 가장 좋아하는 과일!, 3글자")
+    if chosen_word == "청포도":
+        print("꿀떡 삼킬 수 있는 과일!, 3글자")
+    if chosen_word == "천도복숭아":
+        print("매우 뜨거운 과일이라고도 불려!, 5글자")
+    if chosen_word == "샤인머스켓":
+        print("초록초록한게 식감이 아주 좋아!, 5글자")
+
+    guess_word = input("한 글자씩 맞춰봐:").lower()
 
     if guess_word in display:
         print(f"이미 {guess_word}를 말했었어")
