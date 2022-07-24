@@ -35,21 +35,22 @@ def divide(n1, n2):
 operations = {
     "+": add,
     "-": subtract,
-    "*": multiply,
-    "/": divide,
+    "x": multiply,
+    "%": divide,
 }
 
 
 def calculator():
+    print(logo)
 
-    num1 = int(input("첫번째 숫자를 입력해주세요: "))
-    for symbol in operations:
-        print(symbol)
+    num1 = float(input("첫번째 숫자를 입력해주세요: "))
     should_continue = True
 
     while should_continue:
+        for symbol in operations:
+            print(symbol, end=" ")
         operation_symbol = input("연산자를 골라주세요: ")
-        num2 = int(input("숫자를 입력해주세요: "))
+        num2 = float(input("숫자를 입력해주세요: "))
         calculation_function = operations[operation_symbol]
         answer = calculation_function(num1, num2)
 
